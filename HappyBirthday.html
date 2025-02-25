@@ -3,104 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #FF99CC, #FF66FF);
-            color: white;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3.5em;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-
-        p {
-            font-size: 1.5em;
-            font-weight: 300;
-            margin: 20px;
-            max-width: 600px;
-            line-height: 1.6;
-        }
-
-        .balloon {
-            position: absolute;
-            top: 10%;
-            right: 10%;
-            width: 50px;
-            height: 70px;
-            background-color: #FFCC00;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            animation: balloonFloat 5s ease-in-out infinite;
-        }
-
-        .balloon:nth-child(2) {
-            top: 30%;
-            left: 15%;
-            background-color: #FF6666;
-        }
-
-        .balloon:nth-child(3) {
-            top: 50%;
-            right: 25%;
-            background-color: #66CCFF;
-        }
-
-        @keyframes balloonFloat {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .button {
-            padding: 15px 30px;
-            font-size: 1.2em;
-            color: #FF66FF;
-            background-color: white;
-            border: none;
-            border-radius: 25px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .button:hover {
-            background-color: #FF66FF;
-            color: white;
-            transform: translateY(-3px);
-        }
-
-    </style>
+    <title>Happy Birthday Abru!</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="content">
-        <h1>🎉 Happy Birthday! 🎉</h1>
-        <p>Wishing you a day full of love, laughter, and endless joy! May your year ahead be as wonderful as you are. Keep shining bright!</p>
-        <button class="button" onclick="alert('Hope you have the best day ever! Abru 🎂🎈')">Make a Wish!</button>
+    <div class="container">
+        <div class="content">
+            <h1 id="birthday-title">🎉 Happy Birthday! 🎉</h1>
+            <p id="birthday-message">Wishing you a day full of love, laughter, and endless joy! May your year ahead be as wonderful as you are.</p>
+            <div class="balloons">
+                <div class="balloon balloon1"></div>
+                <div class="balloon balloon2"></div>
+                <div class="balloon balloon3"></div>
+            </div>
+            <button class="button" onclick="sendWish()">Make a Wish!</button>
+        </div>
     </div>
 
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-
+    <script src="script.js"></script>
 </body>
 </html>
