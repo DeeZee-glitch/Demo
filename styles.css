@@ -1,0 +1,112 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FF99CC, #FF66FF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: white;
+    font-weight: bold;
+    animation: titleAnimation 2s ease-in-out;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#birthday-message {
+    font-size: 1.5em;
+    color: white;
+    font-weight: 300;
+    margin: 20px;
+    animation: fadeIn 3s ease-in-out;
+    opacity: 0;
+}
+
+.balloons {
+    position: relative;
+    height: 200px;
+    animation: floatBalloons 10s ease-in-out infinite;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: #FFCC00;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    animation: floatBalloon 5s ease-in-out infinite;
+}
+
+.balloon:nth-child(1) {
+    background-color: #FF6666;
+    left: 50px;
+    bottom: 0;
+    animation-delay: 0s;
+}
+
+.balloon:nth-child(2) {
+    background-color: #66CCFF;
+    left: 150px;
+    bottom: 0;
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+    background-color: #FF99CC;
+    left: 250px;
+    bottom: 0;
+    animation-delay: 2s;
+}
+
+@keyframes titleAnimation {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes floatBalloon {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes floatBalloons {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #FF66FF;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #FF66FF;
+    color: white;
+    transform: translateY(-3px);
+}
+
